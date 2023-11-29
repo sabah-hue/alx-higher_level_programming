@@ -10,4 +10,4 @@ elif last_digit == 0:
     message = "0"
 else:
     message = "less than 6 and not 0"
-print(f"Last digit of {number} is {last_digit} and is {message}"
+print(f"Last digit of {number} is {last_digit} and is {message}")
