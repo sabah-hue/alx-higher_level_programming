@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 def islower(c):
-    if c in range(ord('a'), ord('z') + 1):
+    if ord(c) in range(97, 123):
         return True
     else:
         return False
