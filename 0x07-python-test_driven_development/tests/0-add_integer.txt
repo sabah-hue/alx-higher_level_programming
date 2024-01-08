@@ -46,3 +46,16 @@ Add one char and integer
     Traceback (most recent call last):
               ...
     TypeError: a must be an integer
+
+overflow
+    >>> add_integer(float('inf'), 7)
+    Traceback (most recent call last):
+    ...
+    OverflowError: cannot convert float infinity to integer
+
+Add Nan 
+    >>> add_integer(float('nan'))
+
+    Traceback (most recent call last):
+    	      ...
+    ValueError: cannot convert float NaN to integer
