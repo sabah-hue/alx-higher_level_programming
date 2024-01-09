@@ -1,0 +1,26 @@
+test cases Integer validator
+============================
+
+Import
+>>> bg = __import__("7-base_geometry").BaseGeometry
+
+test not integer
+>>> g = bg()
+>>> g.integer_validator("name", "John")
+Traceback (most recent call last):
+...
+TypeError: name must be an integer
+
+test value = 0
+>>> g = bg()
+>>> g.integer_validator("age", 0)
+Traceback (most recent call last):
+...
+ValueError: age must be greater than 0
+
+test -ve number
+>>> g = bg()
+>>> g.integer_validator("distance", -4)
+Traceback (most recent call last):
+...
+ValueError: distance must be greater than 0
