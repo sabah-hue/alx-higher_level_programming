@@ -2,6 +2,8 @@
 """ module ... """
 
 
-def print_sorted(self):
+class MyList(list):
     """ sort class """
-    print(sorted(self))
+
+    def print_sorted(self):
+        print(sorted(self))
