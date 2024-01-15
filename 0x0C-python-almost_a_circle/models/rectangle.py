@@ -71,7 +71,8 @@ class Rectangle(Base):
             print("#" * self.__width)
 
     def __str__(self):
-        z = f"[Rectangle] ({self.id}) {self.x}/{self.y} - {self.width}/{self.height}"
+        z = f"[Rectangle] ({self.id}) {self.__x}/{self.__y} - \
+{self.__width}/{self.__height}"
         return z
 
     def update(self, *args, **kwargs):
