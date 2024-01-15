@@ -30,3 +30,13 @@ class Square(Rectangle):
         """ print string """
         z = f"[Square] ({self.id}) {self.x}/{self.y} - {self.size}"
         return z
+
+    def update(self, *args, **kwargs):
+        """ update function """
+        arr = ['id', 'size', 'x', 'y']
+        if args is not None and len(args) != 0:
+            for i in range(len(args)):
+                setattr(self, arr[i], args[i])
+        else:
+            for k, v in kwargs.items():
+                setattr(self, k, v)
