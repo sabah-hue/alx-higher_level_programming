@@ -13,5 +13,7 @@ class Square(Rectangle):
         self.id = id
 
     def __str__(self):
-        z = ("[Square] ({}) {:d}/{:d} - {:d}".format(self.id, self.x, self.y, self.size))
+        z = f"[Square] ({self.id}) {self.__x}/{self.__y} - \
+{self.__width}/{self.__height}"
         return z
+
