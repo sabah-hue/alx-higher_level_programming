@@ -63,3 +63,24 @@ class Base:
         with open(filename, "r") as f:
             mylist = cls.from_json_string(f.read())
         return [cls.create(**e) for e in mylist]
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """ save in csv file """
+        filename = cls.__name__ + ".csv"
+        with open(filename, "w") as f:
+            if list_objs is None:
+                json.dump([], f)
+            else:
+                newlist = [obj.to_dictionary() for obj in list_objs]
+                f.write(Base.to_json_string(newlist))
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """ load file """
+        filename = cls.__name__ + ".csv"
+        if not os.path.exists(filename):
+            return []
+        with open(filename, "r") as f:
+            mylist = cls.from_json_string(f.read())
+            return [cls.create(**e) for e in mylist]
