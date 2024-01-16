@@ -59,10 +59,11 @@ class Base:
         """load file """
         filename = cls.__name__ + ".json"
         z = []
-        mylist = []
-        if os.path.exists(filename):
+        if os.path.exists(filename) is False:
+            return []
+        else:
             with open(filename, "r") as f:
                 mylist = cls.from_json_string(f.read())
-            for element in mylist:
-                z.append(cls.create(**element))
-                return z
+            for i in range(len(mylist)):
+                z.append(cls.create(**mylist[i]))
+            return z
