@@ -9,6 +9,6 @@ import json
 
 class test_rectangle(unittest.TestCase):
     """class test cases"""
-     def tearDown(self):
-         """ ereas ..."""
-         pass
+    def tearDown(self):
+        """ ereas ..."""
+        pass

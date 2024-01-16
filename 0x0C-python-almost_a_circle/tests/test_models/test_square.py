@@ -13,6 +13,6 @@ import json
 
 class test_square(unittest.TestCase):
     """class test """
-     def tearDown(self):
-         """ erease ... """
-         pass
+    def tearDown(self):
+        """ erease ... """
+        pass
