@@ -61,9 +61,9 @@ class Base:
         z = []
         if os.path.exists(filename) is False:
             return []
-        else:
-            with open(filename, "r") as f:
-                mylist = cls.from_json_string(f.read())
-            for i in range(len(mylist)):
-                z.append(cls.create(**mylist[i]))
-            return z
+        with open(filename, "r") as f:
+            n_read = f.read()
+            mylist = cls.from_json_string(n_read)
+        for i in range(len(mylist)):
+            z.append(cls.create(**mylist[i]))
+        return z
