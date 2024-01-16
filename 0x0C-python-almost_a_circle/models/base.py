@@ -2,6 +2,7 @@
 """ module ... """
 
 import json
+from os import path
 
 
 class Base:
@@ -57,11 +58,11 @@ class Base:
     def load_from_file(cls):
         """load file """
         filename = cls.__name__ + ".json"
+        z = []
         mylist = []
         if os.path.exists(filename):
             with open(filename, "r") as f:
                 mylist = cls.from_json_string(f.read())
-            z = []
             for element in mylist:
                 z.append(cls.create(**element))
                 return z
