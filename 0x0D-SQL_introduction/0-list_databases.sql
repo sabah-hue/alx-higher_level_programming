@@ -1,2 +1,2 @@
 #!/usr/bin/bash
-SHOW DATABASES
+SHOW DATABASES;
