@@ -15,7 +15,7 @@ if __name__ == '__main__':
     query = "SELECT cities.name FROM cities\
              left join states ON cities.state_id = states.id\
              WHERE states.name = %s"
-    cur.execute(query, [argv[4]])
+    cur.execute(query, (argv[4],))
     query_rows = cur.fetchall()
     arr = []
     for row in query_rows:
