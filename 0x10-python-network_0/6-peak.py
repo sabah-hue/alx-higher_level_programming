@@ -19,11 +19,12 @@ def find_peak(list_of_integers):
     #         tmp = i
     # return tmp
     # using binary search
-    peak = list_of_integers[int(size / 2)]
-    if peak > list_of_integers[int(size / 2) - 1]\
-            and peak > list_of_integers[int(size / 2) + 1]:
+    check = int(size / 2)
+    peak = list_of_integers[check]
+    if peak > list_of_integers[check - 1]\
+            and peak > list_of_integers[check + 1]:
         return peak
-    elif peak < list_of_integers[int(size / 2) - 1]:
-        return find_peak(list_of_integers[:int(size / 2)])
+    elif peak < list_of_integers[check - 1]:
+        return find_peak(list_of_integers[:check])
     else:
-        return find_peak(list_of_integers[int(size / 2) + 1:])
+        return find_peak(list_of_integers[check + 1:])
