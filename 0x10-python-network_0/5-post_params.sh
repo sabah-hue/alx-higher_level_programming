@@ -1,3 +1,5 @@
 #!/bin/bash
 #sends a POST request to the passed URL
-curl -sX POST $1 -d "email=hr@holbertonschool.com&subject=I will always be here for PLD" -L
+email="test@gmail.com"
+subject="I will always be here for PLD"
+curl -sX POST $1 -L -d "email=${email}&subject=${subject}"
