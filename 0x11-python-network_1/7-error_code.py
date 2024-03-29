@@ -6,6 +6,7 @@ if __name__ == "__main__":
     link = argv[1]
     try:
         r = requests.get(link)
+        r.raise_for_status()
         print(r.text)
-    except requests.HTTPError as e:
-        print("Error code: {}".format(e.status_code))
+    except requests.exceptions.HTTPError as e:
+        print("Error code: {}".format(e.response.status_code))
