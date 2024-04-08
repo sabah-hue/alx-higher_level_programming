@@ -3,6 +3,8 @@ const args = process.argv;
 if (args[2] === undefined) {
   console.log('No argument');
 }
-for (let i = 2; i < args.length; i++) {
+let i = 2;
+while (args[i] != undefined) {
   console.log(args[i]);
+  i++;
 }
