@@ -1,7 +1,7 @@
 #!/usr/bin/node
 const args = process.argv;
 if (args[2] === undefined || args[3] === undefined) {
-  console.log(0);
+  console.log('0');
 } else {
   let max = args[2];
   for (let i = 2; i < args.length; i++) {
