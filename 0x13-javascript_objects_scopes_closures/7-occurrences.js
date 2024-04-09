@@ -1,8 +1,8 @@
 #!/usr/bin/node
-const x = require('./5-square');
-class Square extends x {
+const Square = require('./5-square');
+class Square extends Square {
   constructor (size) {
-    super(size);
+    super(size, size);
   }
 
   charPrint (c) {
@@ -10,7 +10,7 @@ class Square extends x {
       this.print();
     } else {
       for (let i = 0; i < this.height; i++) {
-        console.log(c.repeat(this.width));
+        console.log(c.repeat(this.size));
       }
     }
   }
