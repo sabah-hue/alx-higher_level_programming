@@ -1,18 +1,10 @@
 #!/usr/bin/node
-const Square = require('./5-square');
-class Square extends Square {
-  constructor (size) {
-    super(size, size);
-  }
-
-  charPrint (c) {
-    if (c === undefined) {
-      this.print();
-    } else {
-      for (let i = 0; i < this.height; i++) {
-        console.log(c.repeat(this.size));
-      }
+exports.nbOccurences = function (list, searchElement) {
+  let n = 0;
+  for (let i = 0; i < list.length; i++) {
+    if (list[i] === searchElement) {
+      n++;
     }
   }
-}
-module.exports = Square;
+  return n;
+};
